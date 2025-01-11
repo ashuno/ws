@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Леша + Аня</title>
+    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&family=Shantell+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+<div id="temporary-screen">
+    <img src="static/hearts2.gif" alt="Loading..." id="loading-gif" style="width:100px; height: auto;">
+    <b id="typing-text"></b>
+</div>
+
+
+
+<div id="content" class="main-container">
+        <div class="container">
+        <div>
+            <div class="image-container">
+                <img src="static/lesha_small.PNG" alt="Lesha Small" class="image1">
+                <img src="static/anya_small.PNG" alt="Anya Small" class="image2">
+            </div>
+        </div>
+
+
+        <div class="text-container  text">
+            <p>Лёша + Аня</p>
+            <p>=</p>
+        </div>
+        <img src="https://static.tildacdn.com/tild6138-3731-4739-b664-333562313338/Clip_path_group_5.svg" alt="Heart" class="heart">
+
+    </div>
+
+
+
+    <div class="container">
+        <br>
+        <div class="text-container  text">
+            <p>Узнали?</p>
+        </div>
+        <br>
+        <div class="text-container  small-text">
+            <p>Время пронеслось незаметно, и у этих</p>
+            <p>милых ребят скоро свадьба!</p>
+            <p>Да-да, мы сами в шоке!</p>
+        </div>
+        <img src="https://static.tildacdn.com/tild6339-6536-4637-b732-323462356363/Group_93_1.svg" alt="Star1" class="star-image-1">
+
+
+    </div>
+        <img src="static/first-image.PNG" alt="Image 1" class="plain-img1 ">
+    <div class="container">
+        <div class="text-container  text">
+            <p>Дорогие наши</p>
+            <p>родные и близкие</p>
+        </div>
+        <br>
+        <div class="text-container  small-text">
+            <p>Наша свадьба без вас не будет такой</p>
+            <p>счастливой, уютной и весёлой!</p>
+            <p>Будем рады разделить с вами</p>
+            <p>это радостное событие!</p>
+        </div>
+        <div class="date-pic">
+            <img src="https://static.tildacdn.com/tild3737-6636-4761-b233-343566303366/Group_100_2.svg"
+                 style="width:50%">
+            <div class="date-text">
+                <p>10/06/2025</p>
+            </div>
+        </div>
+        <div class="text-container  small-text">
+            <p>Просим вас сохранить эту дату свободной</p>
+            <p>для празднования нашей свадьбы.</p>
+            <p>Сбор гостей планируется в 15:00.</p>
+            <p>Более подробную информацию о празднике</p>
+            <p>мы разместим на этом сайте в марте.</p>
+        </div>
+        <img src="https://static.tildacdn.com/tild3861-3961-4233-b635-376534323733/Clip_path_group_7.svg" alt="line" class="line">
+
+    </div>
+
+    <div class="container">
+        <div class="text-container  text">
+            <p>Место проведения</p>
+        </div>
+            <img src="static/veranda.PNG" alt="Place" class="place-img">
+
+        <div class="text-container  small-text">
+            <p>Ждём вас на площадке "Веранда"</p>
+            <p>на территории Усадьбы Суханово</p>
+        </div>
+        <a href="https://yandex.ru/maps/?ll=37.658835%2C55.523584&mode=poi&poi%5Bpoint%5D=37.658567%2C55.523560&poi%5Buri%5D=ymapsbm1%3A%2F%2Forg%3Foid%3D79022681946&utm_source=share&z=19" class="place-button">Посмотреть локацию</a>
+
+    </div>
+
+    <div class="container">
+        <div class="text-container  text">
+            <p>Будем вас ждать!</p>
+        </div>
+        <img src="https://static.tildacdn.com/tild6138-3731-4739-b664-333562313338/Clip_path_group_5.svg" alt="Heart" class="heart">
+        <div class="image-container">
+            <img src="static/second-image.PNG" alt="Image 2" class="plain-img2">
+        </div>
+    </div>
+
+</div>
+<script>
+    const text = "у нас свадьба";
+    const typingTextElement = document.getElementById('typing-text');
+    let index = 0;
+
+    function typeText() {
+        if (index < text.length) {
+            typingTextElement.textContent += text.charAt(index);
+            index++;
+            setTimeout(typeText, 100); // Adjust typing speed here (100ms)
+        }
+    }
+
+    window.onload = function() {
+    typeText();
+    setTimeout(function() {
+        document.getElementById('temporary-screen').style.display = 'none';
+        document.getElementById('main-content').style.display = 'block';
+    }, 5500); // 14 seconds
+    };
+
+
+
+
+
+<!--    const observer = new IntersectionObserver((entries) => {-->
+<!--        entries.forEach(entry => {-->
+<!--            if (entry.isIntersecting) {-->
+<!--                entry.target.classList.add('text');-->
+<!--                observer.unobserve(entry.target);-->
+<!--            }-->
+<!--        });-->
+<!--    });-->
+
+<!--    const textContainers = document.querySelectorAll('.text-container');-->
+<!--    textContainers.forEach(container => {-->
+<!--        observer.observe(container);-->
+<!--    });-->
+
+
+
+
+</script>
+</body>
+</html>

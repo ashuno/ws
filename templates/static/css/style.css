@@ -1,0 +1,386 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+
+
+
+/* ВСЕ КАСАЕМО ВРЕМЕННОГО ЭКРАНА */
+
+#temporary-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    z-index: 1000;
+}
+
+#loading-gif {
+    width: 150px;
+    height: auto;
+}
+
+.typing {
+    border-right: 2px solid black;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: blink 0.7s step-end infinite;
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+
+
+
+
+
+
+
+/* КОНТЕЙНЕРЫ */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    font-family: "Hachi Maru Pop", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.container {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    padding: 40px;
+    text-align: center;
+}
+
+
+.image-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin-bottom: 40px;
+}
+
+
+
+
+
+
+
+
+/* ВСЕ ДЛЯ КАРТИНОК */
+
+.image1 {
+    transform: rotate(-10deg);
+    width: 400px;
+    height: auto;
+    margin-right: -80px;
+    margin-bottom: 70px;
+    animation: moveImage1 3s infinite alternate;
+}
+
+.image2 {
+    transform: rotate(10deg);
+    width: 400px;
+    height: auto;
+    margin-top: 30px;
+    animation: moveImage2 3s infinite alternate;
+
+}
+
+@keyframes moveImage1 {
+    0% {
+        transform: rotate(-13deg);
+    }
+    100% {
+        transform: rotate(-8deg);
+    }
+}
+@keyframes moveImage2 {
+    0% {
+        transform: rotate(12deg);
+    }
+    100% {
+        transform: rotate(7deg);
+    }
+}
+
+.heart {
+    margin-top: 10px;
+}
+
+.plain-img1, .plain-img2 {
+    width: 400px;
+    height: auto;
+}
+
+.plain-img1 {
+    transform: rotate(-10deg);
+    animation: moveImage1 3s infinite alternate;
+}
+
+.plain-img2 {
+    transform: rotate(10deg);
+    animation: moveImage2 3s infinite alternate;
+}
+
+
+.star-image-1 {
+    margin-right: -350px;
+    margin-top: -10px;
+    width: 50px;
+    height: auto;
+    animation: moveStar-Image-1 5s infinite alternate;
+
+}
+@keyframes moveStar-Image-1 {
+    0% {
+        transform: rotate(-10deg);
+    }
+    100% {
+        transform: rotate(10deg);
+    }
+}
+
+.date-pic {
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+}
+
+.place-img {
+    width: 400px;
+    height: auto;
+    margin-top: 30px;
+    animation: movePlace-Img 5s infinite alternate;
+}
+@keyframes movePlace-Img {
+    0% {
+        transform: rotate(-3deg);
+    }
+    100% {
+        transform: rotate(3deg);
+    }
+}
+
+.line {
+    width: 400px;
+    height: auto;
+    margin-top: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+/* ТЕКСТЫ */
+
+.hidden {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+.text {
+    text-align: center;
+    font-size: 40px;
+    line-height: 1.5;
+    animation: text-showup2 1.5s forwards;
+}
+.small-text {
+  font-family: "Shantell Sans", serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 25px;
+       line-height: 1.5;
+  font-variation-settings:
+    "BNCE" 0,
+    "INFM" 0,
+    "SPAC" 0;
+  animation: text-showup 1.5s forwards;
+}
+
+.text.show {
+  animation: text-showup2 1.5s forwards;
+}
+
+.small-text.show {
+  animation: text-showup 1.5s forwards;
+}
+
+.date-text {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0.5rem;
+    text-align: center;
+    font-size: 40px;
+}
+
+@keyframes text-showup {
+    0% {
+        color: white;
+        transform: translateX(-5%);
+    }
+    100% {
+        color: black;
+        transform: translateX(0%);
+    }
+}
+@keyframes text-showup2 {
+    0% {
+        color: white;
+        transform: translateX(2%);
+    }
+    100% {
+        color: black;
+        transform: translateX(0%);
+    }
+}
+
+
+
+
+
+
+
+
+/* КНОПКА */
+
+.place-button {
+    display: inline-block;
+    background-color: #a5bff2;
+    color: white;
+    margin-top: 30px;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 30px;
+    font-size: 16px;
+    border: 2px solid #a5bff2;
+    font-family: "Shantell Sans", serif;
+      font-optical-sizing: auto;
+      font-weight: 300;
+      font-style: normal;
+      font-size: 25px;
+           line-height: 1.5;
+      font-variation-settings:
+        "BNCE" 0,
+        "INFM" 0,
+        "SPAC" 0;
+    transition: background-color 0.3s;
+}
+
+.place-button:hover {
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+}
+
+
+
+
+
+
+
+/* СТИЛИ ДЛЯ МОБИЛЬНОЙ ВЕРСТКИ */
+@media (max-width: 600px) {
+    .main-container {
+        margin-top: 60px;
+        max-width: 400px;
+
+    }
+    .container {
+        width: 100%;
+    }
+
+    .image-container {
+        margin-bottom: 50px;
+    }
+
+    .image1, .image2, .plain-img1, .plain-img2 {
+        width: 200px;
+        height: auto;
+    }
+    .image1 {
+    margin-right: -25px;
+    margin-bottom: 40px;
+    }
+
+    .image2 {
+    margin-left: -25px;
+    }
+
+    .heart {
+        width: 60px;
+        margin-top: 10px;
+    }
+    .text {
+            font-size: 25px;
+            line-height: 1.5;
+        }
+
+    .small-text {
+        font-size: 15px;
+    }
+    .star-image-1 {
+        margin-right: -200px;
+        margin-top: -5px;
+        width: 30px;
+        height: auto;
+        animation: moveStar-Image-1 5s infinite alternate;
+    }
+    .date-text {
+        font-size: 20px;
+    }
+    .place-img {
+        width: 200px;
+        margin-top: 15px;
+    }
+    .line {
+        width: 200px;
+        height: auto;
+        margin-top: 30px;
+    }
+
+    .place-button {
+        margin-top: 15px;
+        padding: 5px 10px;
+        border-radius: 20px;
+        font-size: 10px;
+        border: 2px solid #a5bff2;
+          font-size: 15px;
+}
