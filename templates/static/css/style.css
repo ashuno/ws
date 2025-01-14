@@ -20,12 +20,40 @@ body {
     align-items: center;
     background-color: white;
     z-index: 1000;
+
+    opacity: 1;
+    transition: opacity 1s ease;
 }
 
 #loading-gif {
     width: 150px;
     height: auto;
 }
+
+#main-content {
+    padding: 20px;
+    text-align: center;
+    opacity: 0; /* Start hidden */
+    transition: opacity 1s ease; /* Transition for fade effect */
+}
+
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+/* Fade-in class */
+.fade-in {
+    opacity: 1;
+}
+
+/* Fade-out class */
+.fade-out {
+    opacity: 0;
+}
+
 
 .typing {
     border-right: 2px solid black;
