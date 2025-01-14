@@ -12,7 +12,7 @@
 </head>
 <body>
 
-<div id="temporary-screen">
+<div id="temporary-screen" class="frame">
     <img src="static/hearts2.gif" alt="Loading..." id="loading-gif" style="width:100px; height: auto;">
     <b id="typing-text"></b>
 </div>
@@ -33,7 +33,7 @@
             <p>Лёша + Аня</p>
             <p>=</p>
         </div>
-        <img src="https://static.tildacdn.com/tild6138-3731-4739-b664-333562313338/Clip_path_group_5.svg" alt="Heart" class="heart">
+        <img src="static/heart.svg" alt="Heart" class="heart">
 
     </div>
 
@@ -50,7 +50,7 @@
             <p>милых ребят скоро свадьба!</p>
             <p>Да-да, мы сами в шоке!</p>
         </div>
-        <img src="https://static.tildacdn.com/tild6339-6536-4637-b732-323462356363/Group_93_1.svg" alt="Star1" class="star-image-1">
+        <img src="static/sparkle.svg" alt="Star1" class="star-image-1">
 
 
     </div>
@@ -68,7 +68,7 @@
             <p>это радостное событие!</p>
         </div>
         <div class="date-pic">
-            <img src="https://static.tildacdn.com/tild3737-6636-4761-b233-343566303366/Group_100_2.svg"
+            <img src="static/oval.svg"
                  style="width:50%">
             <div class="date-text">
                 <p>10/06/2025</p>
@@ -81,7 +81,7 @@
             <p>Более подробную информацию о празднике</p>
             <p>мы разместим на этом сайте в марте.</p>
         </div>
-        <img src="https://static.tildacdn.com/tild3861-3961-4233-b635-376534323733/Clip_path_group_7.svg" alt="line" class="line">
+        <img src="static/line.svg" alt="line" class="line">
 
     </div>
 
@@ -103,7 +103,7 @@
         <div class="text-container  text">
             <p>Будем вас ждать!</p>
         </div>
-        <img src="https://static.tildacdn.com/tild6138-3731-4739-b664-333562313338/Clip_path_group_5.svg" alt="Heart" class="heart">
+        <img src="static/heart.svg" alt="Heart" class="heart">
         <div class="image-container">
             <img src="static/second-image.PNG" alt="Image 2" class="plain-img2">
         </div>
@@ -111,15 +111,17 @@
 
 </div>
 <script>
-    const text = "у нас свадьба";
+    const text = "У нас свадьба!";
     const typingTextElement = document.getElementById('typing-text');
+    const frame1 = document.getElementById('temporary-screen');
+    const frame2 = document.getElementById('content');
     let index = 0;
 
     function typeText() {
         if (index < text.length) {
             typingTextElement.textContent += text.charAt(index);
             index++;
-            setTimeout(typeText, 100); // Adjust typing speed here (100ms)
+            setTimeout(typeText, 150); // Adjust typing speed here (100ms)
         }
     }
 
@@ -128,29 +130,8 @@
     setTimeout(function() {
         document.getElementById('temporary-screen').style.display = 'none';
         document.getElementById('main-content').style.display = 'block';
-    }, 5500); // 14 seconds
+    }, 5500);
     };
-
-
-
-
-
-<!--    const observer = new IntersectionObserver((entries) => {-->
-<!--        entries.forEach(entry => {-->
-<!--            if (entry.isIntersecting) {-->
-<!--                entry.target.classList.add('text');-->
-<!--                observer.unobserve(entry.target);-->
-<!--            }-->
-<!--        });-->
-<!--    });-->
-
-<!--    const textContainers = document.querySelectorAll('.text-container');-->
-<!--    textContainers.forEach(container => {-->
-<!--        observer.observe(container);-->
-<!--    });-->
-
-
-
 
 </script>
 </body>
