@@ -126,6 +126,14 @@ body {
 
 /* ВСЕ ДЛЯ КАРТИНОК */
 
+
+#image {
+            max-width: 100%;
+            height: auto;
+            transition: opacity 0.5s ease; /* Плавный переход для изменения прозрачности */
+            opacity: 1; /* Начальная прозрачность */
+        }
+
 .image1 {
     transform: rotate(-10deg);
     width: 400px;
@@ -133,6 +141,7 @@ body {
     margin-right: -80px;
     margin-bottom: 70px;
     animation: moveImage1 3s infinite alternate;
+    transition: opacity 0.5s ease;
 }
 
 .image2 {
@@ -141,6 +150,7 @@ body {
     height: auto;
     margin-top: 30px;
     animation: moveImage2 3s infinite alternate;
+    transition: opacity 0.5s ease;
 
 }
 

@@ -122,15 +122,15 @@
 
             function changeForward() {
                 currentImage1 = (currentImage1 % totalImages) + 1; // Переключаемся между 1, 2 и 3
-                document.getElementById('image1').src = `static/image${currentImage1}.png`;
+                document.getElementById('image1').src = `static/image${currentImage1}.PNG`;
                 currentImage2 = (currentImage2 % totalImages) + 1; // Переключаемся между 1, 2 и 3
-                document.getElementById('image2').src = `static/image${currentImage2}.png`;
+                document.getElementById('image2').src = `static/image${currentImage2}.PNG`;
             }
             function changeBackward() {
                 currentImage1 = (currentImage1 - 2 + totalImages) % totalImages + 1; // Переключаемся назад
-                document.getElementById('image1').src = `static/image${currentImage1}.png`;
+                document.getElementById('image1').src = `static/image${currentImage1}.PNG`;
                 currentImage2 = (currentImage2 - 2 + totalImages) % totalImages + 1; // Переключаемся назад
-                document.getElementById('image2').src = `static/image${currentImage2}.png`;
+                document.getElementById('image2').src = `static/image${currentImage2}.PNG`;
             }
         </script>
     </div>
