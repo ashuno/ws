@@ -271,6 +271,13 @@ body {
   animation: text-showup 1.5s forwards;
 }
 
+.bad-script-regular {
+  font-family: "Bad Script", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
 .text.show {
   animation: text-showup2 1.5s forwards;
 }

@@ -8,15 +8,17 @@
     <link rel="stylesheet" href="static/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&family=Shantell+Sans:ital,wght@0,300..800;1,300..800&display=swap"
-          rel="stylesheet">
+<!--    <link href="https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&family=Shantell+Sans:ital,wght@0,300..800;1,300..800&display=swap"-->
+<!--          rel="stylesheet">-->
+    <link href="https://fonts.googleapis.com/css2?family=Bad+Script&family=Hachi+Maru+Pop&family=Shantell+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
 
 </head>
 <body>
 
 <div id="temporary-screen" class="fade-in">
     <img src="static/hearts2.gif" alt="Loading..." id="loading-gif" style="width:100px; height: auto;">
-    <b id="typing-text"></b>
+    <b id="typing-text" class="small-text"></b>
 </div>
 
 
@@ -31,7 +33,7 @@
             </div>
 
 
-            <div class="text-container  text">
+            <div class="text-container text">
                 <p>Лёша + Аня</p>
                 <p>=</p>
             </div>
@@ -42,8 +44,8 @@
 
         <div class="container">
             <br>
-            <div class="text-container  text">
-                <p>Узнали?</p>
+            <div class="text-container text" >
+                <H2 style="font-weight: normal; letter-spacing: 10px;">Узнали?</H2>
             </div>
             <br>
             <div class="text-container  small-text">
@@ -105,20 +107,28 @@
             <div class="text-container  text">
                 <p>Будем вас ждать!</p>
             </div>
-            <img src="static/heart.svg" alt="Heart" class="heart">
-            <div class="image-container">
-                <img src="static/image3.PNG" id="image1" class="image1" style="margin-right: -300px;">
-                <img src="static/image1.PNG" id="image2" class="image2">
+            <div class="text-container small-text" style="margin-top:20px;">
+                <p>С большой любовью, Лёша и Аня!</p>
             </div>
-            <button onclick="changeBackward()" class="place-button"> < </button>
-            <button onclick="changeForward()" class="place-button"> > </button>
+            <img src="static/heart.svg" alt="Heart" class="heart" style="margin-top: 5%; margin-bottom: 3%;">
+            <div class="image-container">
+                <button onclick="changeBackward()" class="place-button" style="margin-bottom: 30%;"> < </button>
+                <img src="static/image2.PNG" id="image1" class="image1" style="margin-right: -50%;">
+                <img src="static/image1.PNG" id="image2" class="image2">
+                <button onclick="changeForward()" class="place-button" style="margin-bottom: 30%;"> > </button>
+            </div>
+
+
+
+
+
 
         </div>
 
         <script>
-            let currentImage1 = 1;
-            let currentImage2 = 2;
-            const totalImages = 5;
+            let currentImage1 = 2;
+            let currentImage2 = 1;
+            const totalImages = 14;
 
             function changeForward() {
                 currentImage1 = (currentImage1 % totalImages) + 1; // Переключаемся между 1, 2 и 3
@@ -134,6 +144,50 @@
             }
         </script>
     </div>
+
+<!--    <div class="bad-script-regular" style="line-height: 1.1;">-->
+<!--        <p>30.09.2024</p>-->
+<!--        <p>Москва</p>-->
+<!--        </br>-->
+<!--        <p>06.01.2022</p>-->
+<!--        <p>Карелия</p>-->
+<!--        </br>-->
+<!--        <p>14.05.2022</p>-->
+<!--        <p>Москва</p>-->
+<!--        </br>-->
+<!--        <p>30.07.2022</p>-->
+<!--        <p>Турция</p>-->
+<!--        </br>-->
+<!--        <p>28.08.2022</p>-->
+<!--        <p>Москва</p>-->
+<!--        </br>-->
+<!--        <p>28.01.2023</p>-->
+<!--        <p>Белгород</p>-->
+<!--        </br>-->
+<!--        <p>13.06.2023</p>-->
+<!--        <p>Москва</p>-->
+<!--        </br>-->
+<!--        <p>30.07.2023</p>-->
+<!--        <p>Турция</p>-->
+<!--        </br>-->
+<!--        <p>03.03.2024</p>-->
+<!--        <p>Териберка</p>-->
+<!--        </br>-->
+<!--        <p>30.04.2024</p>-->
+<!--        <p>Армения</p>-->
+<!--        </br>-->
+<!--        <p>05.10.2024</p>-->
+<!--        <p>Москва</p>-->
+<!--        </br>-->
+<!--        <p>07.12.2024</p>-->
+<!--        <p>Москва</p>-->
+<!--        </br>-->
+<!--        <p>03.01.2025</p>-->
+<!--        <p>Архыз</p>-->
+<!--        </br>-->
+<!--    </div>-->
+
+
 </div>
 <script>
     const text = "У нас свадьба!";
@@ -165,6 +219,11 @@
         }, 1000);
     }, 4500);
 };
+
+
+
+
+
 
 </script>
 </body>
