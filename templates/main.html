@@ -185,10 +185,10 @@
                 <img src="static/3color5.png" alt="Цвет 5">
                 <img src="static/3color6.png" alt="Цвет 6">
             </div>
-            <div class="image-container" style="margin-top:3%;">
-                <button onclick="changeOutfitBackward()" class="place-button" style="margin-bottom: 50%; margin-right:3%;"> < </button>
-                <img src="static/color-palette1.JPG" id="outfit-image" class="outfit-img">
-                <button onclick="changeOutfitForward()" class="place-button" style="margin-bottom: 50%; margin-left:3%;"> > </button>
+            <div class="image-container" style="margin-top:5%;">
+                <button onclick="changeOutfitBackward()" class="place-button" style="margin-bottom: 40%;"> < </button>
+                <img src="static/3color-palette1.png" id="outfit-image" class="outfit-img">
+                <button onclick="changeOutfitForward()" class="place-button" style="margin-bottom: 40%;"> > </button>
             </div>
         </div>
         <script>
@@ -197,11 +197,11 @@
 
             function changeOutfitForward() {
                 currentOutfitImage = (currentOutfitImage % totalOutfitImages) + 1;
-                document.getElementById('outfit-image').src = `static/color-palette${currentOutfitImage}.JPG`;
+                document.getElementById('outfit-image').src = `static/3color-palette${currentOutfitImage}.png`;
             }
             function changeOutfitBackward() {
                 currentOutfitImage = (currentOutfitImage - 2 + totalOutfitImages) % totalOutfitImages + 1; // Переключаемся назад
-                document.getElementById('outfit-image').src = `static/color-palette${currentOutfitImage}.JPG`;
+                document.getElementById('outfit-image').src = `static/3color-palette${currentOutfitImage}.png`;
             }
         </script>
 

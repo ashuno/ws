@@ -191,10 +191,11 @@ body {
 }
 
 .outfit-img {
-    width: 400px;
+    width: 600px;
     height: auto;
     border-radius: 30px;
     transition: opacity 0.5s ease;
+    animation: movePlace-Img 5s infinite alternate
 }
 
 .icon {
@@ -556,7 +557,7 @@ body {
             animation: text-showup2 1.5s forwards;
         }
         .outfit-img {
-            width: 200px;
+            width: 300px;
             height: auto;
         }
 
