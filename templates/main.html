@@ -206,8 +206,8 @@
             <img src="static/heart.svg" alt="Heart" class="heart" style="margin-top: 5%; margin-bottom: 3%;">
             <div class="image-container">
                 <button onclick="changeBackward()" class="place-button" style="margin-bottom: 30%;"> < </button>
-                <img src="static/smallimage2.PNG" id="image1" class="image1" style="margin-right: -50%;">
-                <img src="static/smallimage1.PNG" id="image2" class="image2">
+                <img src="static/smallimage2.png" id="image1" class="image1" style="margin-right: -50%;">
+                <img src="static/smallimage1.png" id="image2" class="image2">
                 <button onclick="changeForward()" class="place-button" style="margin-bottom: 30%;"> > </button>
             </div>
         </div>
@@ -219,15 +219,15 @@
 
             function changeForward() {
                 currentImage1 = (currentImage1 % totalImages) + 1; // Переключаемся между 1, 2 и 3
-                document.getElementById('image1').src = `static/smallimage${currentImage1}.PNG`;
+                document.getElementById('image1').src = `static/smallimage${currentImage1}.png`;
                 currentImage2 = (currentImage2 % totalImages) + 1; // Переключаемся между 1, 2 и 3
-                document.getElementById('image2').src = `static/smallimage${currentImage2}.PNG`;
+                document.getElementById('image2').src = `static/smallimage${currentImage2}.png`;
             }
             function changeBackward() {
                 currentImage1 = (currentImage1 - 2 + totalImages) % totalImages + 1; // Переключаемся назад
-                document.getElementById('image1').src = `static/smallimage${currentImage1}.PNG`;
+                document.getElementById('image1').src = `static/smallimage${currentImage1}.png`;
                 currentImage2 = (currentImage2 - 2 + totalImages) % totalImages + 1; // Переключаемся назад
-                document.getElementById('image2').src = `static/smallimage${currentImage2}.PNG`;
+                document.getElementById('image2').src = `static/smallimage${currentImage2}.png`;
             }
         </script>
     </div>
