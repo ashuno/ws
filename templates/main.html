@@ -152,15 +152,15 @@
                         const locationToggle = document.getElementById("locationToggle");
                         const locationBlocks = document.querySelectorAll(".text-block .location");
 
-                        toggleButton.addEventListener("click", () => {
+                        locationToggle.addEventListener("click", () => {
                             locationBlocks[0].classList.toggle("active");
                             locationBlocks[1].classList.toggle("active");
 
                             // Меняем текст кнопки в зависимости от состояния
                             if (locationBlocks[0].classList.contains("active")) {
-                                toggleButton.textContent = "△ Скрыть";
+                                locationToggle.textContent = "△ Скрыть";
                             } else {
-                                toggleButton.textContent = "▽ Детали";
+                                locationToggle.textContent = "▽ Детали";
                             }
                         });
                     </script>
@@ -277,6 +277,8 @@
                     let currentImage1 = 2;
                     let currentImage2 = 1;
                     let images = [];
+                    image1 = document.getElementById("image1");
+                    image2 = document.getElementById("image2");
                     const totalImages = 14;
 
                     function preloadImages() {
@@ -289,8 +291,8 @@
                     function changeImages(p) {
                         currentImage1 = (currentImage1 % totalImages) + p; // Переключаемся между 1, 2 и 3
                         currentImage2 = (currentImage2 % totalImages) + p; // Переключаемся между 1, 2 и 3
-                        document.getElementById("image1").src = images[currentImage1].src;
-                        document.getElementById("image2").src = images[currentImage2].src;
+                        image1.src = images[currentImage1].src;
+                        image2.src = images[currentImage2].src;
                     }
 
                     function changeForward() {
