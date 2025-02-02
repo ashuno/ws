@@ -140,6 +140,31 @@
                         <p>Ждём вас на площадке "Веранда"</p>
                         <p>на территории Усадьбы Суханово</p>
                     </div>
+                    <div class="text-block location" id="locationBlock2">
+                        <p>Особенности локации</p>
+                    </div>
+                    <div class="text-block location" id="locationBlock3">
+                        <p>Особенности локации</p>
+                    </div>
+                    <div class="toggle-button" id="locationToggle">▽ Детали</div>
+
+                    <script>
+                        const locationToggle = document.getElementById("locationToggle");
+                        const locationBlocks = document.querySelectorAll(".text-block .location");
+
+                        toggleButton.addEventListener("click", () => {
+                            locationBlocks[0].classList.toggle("active");
+                            locationBlocks[1].classList.toggle("active");
+
+                            // Меняем текст кнопки в зависимости от состояния
+                            if (locationBlocks[0].classList.contains("active")) {
+                                toggleButton.textContent = "△ Скрыть";
+                            } else {
+                                toggleButton.textContent = "▽ Детали";
+                            }
+                        });
+                    </script>
+
                     <a
                         href="https://yandex.ru/maps/?ll=37.658835%2C55.523584&mode=poi&poi%5Bpoint%5D=37.658567%2C55.523560&poi%5Buri%5D=ymapsbm1%3A%2F%2Forg%3Foid%3D79022681946&utm_source=share&z=19"
                         class="place-button"
@@ -153,21 +178,21 @@
                         <p>Дресс-код</p>
                     </div>
                     <div class="text-container small-text" style="margin-top: 3%">
-                        <div class="text-block active" id="block1">
+                        <div class="text-block dress-code active" id="block1">
                             <p>
                                 Мы будем очень рады, если вы поддержите цветовую палитру нашего праздника. Это поможет
                                 создать гармоничную атмосферу и сделать наш праздник еще более особенным.
                             </p>
                         </div>
 
-                        <div class="text-block" id="block2">
+                        <div class="text-block dress-code" id="block2">
                             <p>
                                 Будем благодарны, если вы отдадите предпочтение не ярким нарядам. Также, пожалуйста,
                                 избегайте белого и чёрного цветов.
                             </p>
                         </div>
 
-                        <div class="text-block" id="block3">
+                        <div class="text-block dress-code" id="block3">
                             <p>
                                 Если вы планируете носить шпильки, пожалуйста, имейте в виду, что на площадке досчатый
                                 пол, и это может создать некоторые неудобства. Мы хотим, чтобы вам было комфортно!
@@ -177,7 +202,7 @@
                     </div>
                     <script>
                         const toggleButton = document.getElementById("toggleButton");
-                        const blocks = document.querySelectorAll(".text-block");
+                        const blocks = document.querySelectorAll(".text-block .dress-code");
 
                         toggleButton.addEventListener("click", () => {
                             // Переключаем класс active только для блоков 2 и 3
