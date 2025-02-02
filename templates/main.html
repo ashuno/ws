@@ -262,9 +262,9 @@
                     }
 
                     function changeImages(p) {
-                        currentImage1 = currentImage1 + (p % totalImages) + 1; // Переключаемся между 1, 2 и 3
+                        currentImage1 = (currentImage1 % totalImages) + p; // Переключаемся между 1, 2 и 3
+                        currentImage2 = (currentImage2 % totalImages) + p; // Переключаемся между 1, 2 и 3
                         document.getElementById("image1") = images[currentImage1];
-                        currentImage2 = currentImage2 + (p % totalImages) + 1; // Переключаемся между 1, 2 и 3
                         document.getElementById("image2") = images[currentImage2];
                     }
 
