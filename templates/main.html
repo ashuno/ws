@@ -289,8 +289,8 @@
                     function changeImages(p) {
                         currentImage1 = (currentImage1 % totalImages) + p; // Переключаемся между 1, 2 и 3
                         currentImage2 = (currentImage2 % totalImages) + p; // Переключаемся между 1, 2 и 3
-                        document.getElementById("image1") = images[currentImage1];
-                        document.getElementById("image2") = images[currentImage2];
+                        document.getElementById("image1").src = images[currentImage1].src;
+                        document.getElementById("image2").src = images[currentImage2].src;
                     }
 
                     function changeForward() {
