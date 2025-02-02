@@ -256,10 +256,8 @@
 
                     function preloadImages() {
                         for (let i = 0; i < totalImages; i++) {
-                            for (var i = 0; i < arguments.length; i++) {
-                                images[i] = new Image();
-                                images[i].src = `static/smallimage${i + 1}.png`;
-                            }
+                            images[i] = new Image();
+                            images[i].src = `static/smallimage${i + 1}.png`;
                         }
                     }
 
