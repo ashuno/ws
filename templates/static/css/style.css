@@ -104,7 +104,7 @@ body {
     width: 100%;
     max-width: 800px;
     height: auto;
-    padding: 40px;
+    padding: 20px;
     text-align: center;
 }
 
@@ -262,7 +262,9 @@ body {
 }
 
 
-
+.date-img {
+    width:50%;
+}
 
 
 
@@ -379,7 +381,7 @@ body {
 
 .schedule {
     margin: 0 auto; /* Центрирует контейнер */
-    padding: 20px; /* Отступы внутри контейнера */
+    padding: 0px; /* Отступы внутри контейнера */
 }
 
 .schedule-item {
@@ -402,8 +404,6 @@ body {
 .event-info {
     flex-grow: 1; /* Позволяет описанию занимать оставшееся пространство */
 }
-
-
 
 .additional-info {
     font-size: 20px; /* Размер шрифта для дополнительного текста */
@@ -559,6 +559,9 @@ body {
         .outfit-img {
             width: 300px;
             height: auto;
+        }
+        .date-img {
+            width:60%;
         }
 
 }
