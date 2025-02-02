@@ -289,8 +289,10 @@
                     }
 
                     function changeImages(p) {
+                        console.log(`prev ${currentImage1} ${currentImage2}`);
                         currentImage1 = (currentImage1 + p) % totalImages; // Переключаемся между 1, 2 и 3
                         currentImage2 = (currentImage2 + p) % totalImages; // Переключаемся между 1, 2 и 3
+                        console.log(`next ${currentImage1} ${currentImage2}`);
                         img1.src = images[currentImage1 - 1].src;
                         img2.src = images[currentImage2 - 1].src;
                     }
