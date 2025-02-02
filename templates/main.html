@@ -277,8 +277,8 @@
                     let currentImage1 = 2;
                     let currentImage2 = 1;
                     let images = [];
-                    image1 = document.getElementById("image1");
-                    image2 = document.getElementById("image2");
+                    let img1 = document.getElementById("image1");
+                    let img2 = document.getElementById("image2");
                     const totalImages = 14;
 
                     function preloadImages() {
@@ -291,8 +291,8 @@
                     function changeImages(p) {
                         currentImage1 = (currentImage1 % totalImages) + p; // Переключаемся между 1, 2 и 3
                         currentImage2 = (currentImage2 % totalImages) + p; // Переключаемся между 1, 2 и 3
-                        image1.src = images[currentImage1].src;
-                        image2.src = images[currentImage2].src;
+                        img1.src = images[currentImage1].src;
+                        img2.src = images[currentImage2].src;
                     }
 
                     function changeForward() {
