@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru" xmlns="http://www.w3.org/1999/html">
+<html lang="ru" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -140,24 +140,26 @@
                         <p>Ждём вас на площадке "Веранда"</p>
                         <p>на территории Усадьбы Суханово</p>
                     </div>
-                    <div class="text-block location" id="locationBlock2">
-                        <p>Особенности локации</p>
+                    <div class="text-container small-text" style="margin-top: 3%">
+                        <div class="text-block location" id="locationBlock0">
+                            <p>Особенности локации</p>
+                        </div>
+                        <div class="text-block location" id="locationBlock1">
+                            <p>Особенности локации</p>
+                        </div>
+                        <div class="toggle-button" id="locationToggle">▽ Детали</div>
                     </div>
-                    <div class="text-block location" id="locationBlock3">
-                        <p>Особенности локации</p>
-                    </div>
-                    <div class="toggle-button" id="locationToggle">▽ Детали</div>
 
                     <script>
                         const locationToggle = document.getElementById("locationToggle");
-                        const locationBlocks = document.querySelectorAll(".text-block .location");
+                        const locationBlocks0 = document.getElementById("locationBlock0");
+                        const locationBlocks1 = document.getElementById("locationBlock1");
 
                         locationToggle.addEventListener("click", () => {
-                            locationBlocks[0].classList.toggle("active");
-                            locationBlocks[1].classList.toggle("active");
+                            locationBlocks0.classList.toggle("active");
+                            locationBlocks1.classList.toggle("active");
 
-                            // Меняем текст кнопки в зависимости от состояния
-                            if (locationBlocks[0].classList.contains("active")) {
+                            if (locationBlocks0.classList.contains("active")) {
                                 locationToggle.textContent = "△ Скрыть";
                             } else {
                                 locationToggle.textContent = "▽ Детали";
@@ -170,7 +172,6 @@
                         class="place-button"
                         >Посмотреть локацию</a
                     >
-                    <br />
                 </div>
 
                 <div class="container">
@@ -202,15 +203,18 @@
                     </div>
                     <script>
                         const toggleButton = document.getElementById("toggleButton");
-                        const blocks = document.querySelectorAll(".text-block .dress-code");
+<!--                        const blocks = document.querySelectorAll(".text-block .dress-code");-->
+
+                        const block1 = document.getElementById("block2");
+                        const block2 = document.getElementById("block3");
 
                         toggleButton.addEventListener("click", () => {
                             // Переключаем класс active только для блоков 2 и 3
-                            blocks[1].classList.toggle("active");
-                            blocks[2].classList.toggle("active");
+                            block1.classList.toggle("active");
+                            block2.classList.toggle("active");
 
                             // Меняем текст кнопки в зависимости от состояния
-                            if (blocks[1].classList.contains("active")) {
+                            if (block1.classList.contains("active")) {
                                 toggleButton.textContent = "△ Скрыть";
                             } else {
                                 toggleButton.textContent = "▽ Показать подробнее";
@@ -227,31 +231,59 @@
                         <img src="static/3color6.png" alt="Цвет 6" />
                     </div>
                     <div class="image-container" style="margin-top: 5%">
-                        <button onclick="changeOutfitBackward()" class="place-button" style="margin-bottom: 40%">
+                        <button onclick="changeOutfitBackward()" class="place-button" style="margin-bottom: 25%">
                             <
                         </button>
-                        <img src="static/3color-palette1.png" id="outfit-image" class="outfit-img" />
-                        <button onclick="changeOutfitForward()" class="place-button" style="margin-bottom: 40%">
+                        <img src="static/color-palette1.PNG" id="outfit-image" class="place-img" />
+                        <button onclick="changeOutfitForward()" class="place-button" style="margin-bottom: 25%">
                             >
                         </button>
                     </div>
                 </div>
                 <script>
+<!--                    let currentOutfitImage = 1;-->
+<!--                    const totalOutfitImages = 7;-->
+
+<!--                    function changeOutfitForward() {-->
+<!--                        currentOutfitImage = (currentOutfitImage % totalOutfitImages) + 1;-->
+<!--                        document.getElementById("outfit-image").src = `static/color-palette${currentOutfitImage}.PNG`;-->
+<!--                    }-->
+<!--                    function changeOutfitBackward() {-->
+<!--                        currentOutfitImage = ((currentOutfitImage - 2 + totalOutfitImages) % totalOutfitImages) + 1; // Переключаемся назад-->
+<!--                        document.getElementById("outfit-image").src = `static/color-palette${currentOutfitImage}.PNG`;-->
+<!--                    }-->
+
+
+
+
+
+
                     let currentOutfitImage = 1;
-                    const totalOutfitImages = 6;
+                    let outfitImages = [];
+                    let outfitImg = document.getElementById("outfit-image");
+                    const totalOutfitImages = 7;
+
+                    function preloadOutfitImages() {
+                        for (let i = 0; i < totalOutfitImages; i++) {
+                            outfitImages[i] = new Image();
+                            outfitImages[i].src = `static/color-palette${i + 1}.PNG`;
+                        }
+                    }
+
+                    function changeOutfitImages(p) {
+                        currentOutfitImage = (currentOutfitImage + p) % totalOutfitImages; // Переключаемся между 1, 2 и 3
+                        outfitImg.src = outfitImages[currentOutfitImage].src;
+                    }
 
                     function changeOutfitForward() {
-                        currentOutfitImage = (currentOutfitImage % totalOutfitImages) + 1;
-                        document.getElementById("outfit-image").src = `static/3color-palette${currentOutfitImage}.png`;
+                        changeOutfitImages(1);
                     }
                     function changeOutfitBackward() {
-                        currentOutfitImage = ((currentOutfitImage - 2 + totalOutfitImages) % totalOutfitImages) + 1; // Переключаемся назад
-                        document.getElementById("outfit-image").src = `static/3color-palette${currentOutfitImage}.png`;
+                        changeOutfitImages(-1);
                     }
                 </script>
 
                 <div class="container">
-                    <br />
                     <div class="text-container text">
                         <p>Анкета гостя</p>
                     </div>
@@ -341,6 +373,7 @@
                     }, 1000);
                 }, 4500);
                 preloadImages();
+                preloadOutfitImages();
             };
         </script>
     </body>
