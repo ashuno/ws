@@ -572,9 +572,10 @@ body {
     display: flex;
     position: relative;
     justify-content: center; /* Центрирует изображения в ряду */
+    align-items: flex-end;
     width: fit-content;
     height: 233px;
-    margin: 3% 0 30px;
+    margin: 3% 0 40px;
     gap: 20px;
   }
 
