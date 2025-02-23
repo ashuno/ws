@@ -567,3 +567,33 @@ body {
         }
 
 }
+
+.imagecarousel {
+    display: flex;
+    position: relative;
+    justify-content: center; /* Центрирует изображения в ряду */
+    width: fit-content;
+    height: 233px;
+    margin: 3% 0 30px;
+    gap: 20px;
+  }
+
+.imagecarousel img {
+    width: 80px; /* Ширина изображений */
+    height: auto; /* Автоматическая высота для сохранения пропорций */
+    margin: 0; /* Убирает отступы между изображениями */
+    box-shadow: 2px 2px 8px #8a8a8a;
+}
+
+.imagecarousel {
+    animation: bannermove 50s linear infinite;
+}
+
+@keyframes bannermove {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}

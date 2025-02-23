@@ -142,10 +142,23 @@
                     </div>
                     <div class="text-container small-text" style="margin-top: 3%">
                         <div class="text-block location" id="locationBlock0">
-                            <p>Особенности локации</p>
+                            <p>
+                                На локации имеется парковка в небольшом отдалении по грунтовой дороге, также имеется
+                                возможность доехать на авто до самой Веранды, возле которой имеется зона посадки.
+                            </p>
                         </div>
                         <div class="text-block location" id="locationBlock1">
-                            <p>Особенности локации</p>
+                            <p>
+                                Веранда распологается в непосредственной близости к воде, имеет досчатый пол с
+                                небольшими щелями - сликом тонкие шпильки могут быть проблемой.
+                            </p>
+                        </div>
+                        <div class="text-block location" id="locationBlock2">
+                            <p>Также на площадке имеется ряд ограничений:</p>
+                            <ul>
+                                <li>на улице нельзя шуметь послее 21:00</li>
+                                <li>нельзя использовать конфети, бенгальские огни и свечи</li>
+                            </ul>
                         </div>
                         <div class="toggle-button" id="locationToggle">▽ Детали</div>
                     </div>
@@ -154,10 +167,12 @@
                         const locationToggle = document.getElementById("locationToggle");
                         const locationBlocks0 = document.getElementById("locationBlock0");
                         const locationBlocks1 = document.getElementById("locationBlock1");
+                        const locationBlocks2 = document.getElementById("locationBlock2");
 
                         locationToggle.addEventListener("click", () => {
                             locationBlocks0.classList.toggle("active");
                             locationBlocks1.classList.toggle("active");
+                            locationBlocks2.classList.toggle("active");
 
                             if (locationBlocks0.classList.contains("active")) {
                                 locationToggle.textContent = "△ Скрыть";
@@ -203,7 +218,7 @@
                     </div>
                     <script>
                         const toggleButton = document.getElementById("toggleButton");
-<!--                        const blocks = document.querySelectorAll(".text-block .dress-code");-->
+                        <!--                        const blocks = document.querySelectorAll(".text-block .dress-code");-->
 
                         const block1 = document.getElementById("block2");
                         const block2 = document.getElementById("block3");
@@ -222,7 +237,7 @@
                         });
                     </script>
 
-                    <div class="image-row" style="margin-top: 3%">
+                    <div class="imagecarousel" style="margin-top: 3%">
                         <img src="static/3color1.png" alt="Цвет 1" />
                         <img src="static/3color2.png" alt="Цвет 2" />
                         <img src="static/3color3.png" alt="Цвет 3" />
@@ -241,22 +256,17 @@
                     </div>
                 </div>
                 <script>
-<!--                    let currentOutfitImage = 1;-->
-<!--                    const totalOutfitImages = 7;-->
+                    <!--                    let currentOutfitImage = 1;-->
+                    <!--                    const totalOutfitImages = 7;-->
 
-<!--                    function changeOutfitForward() {-->
-<!--                        currentOutfitImage = (currentOutfitImage % totalOutfitImages) + 1;-->
-<!--                        document.getElementById("outfit-image").src = `static/color-palette${currentOutfitImage}.PNG`;-->
-<!--                    }-->
-<!--                    function changeOutfitBackward() {-->
-<!--                        currentOutfitImage = ((currentOutfitImage - 2 + totalOutfitImages) % totalOutfitImages) + 1; // Переключаемся назад-->
-<!--                        document.getElementById("outfit-image").src = `static/color-palette${currentOutfitImage}.PNG`;-->
-<!--                    }-->
-
-
-
-
-
+                    <!--                    function changeOutfitForward() {-->
+                    <!--                        currentOutfitImage = (currentOutfitImage % totalOutfitImages) + 1;-->
+                    <!--                        document.getElementById("outfit-image").src = `static/color-palette${currentOutfitImage}.PNG`;-->
+                    <!--                    }-->
+                    <!--                    function changeOutfitBackward() {-->
+                    <!--                        currentOutfitImage = ((currentOutfitImage - 2 + totalOutfitImages) % totalOutfitImages) + 1; // Переключаемся назад-->
+                    <!--                        document.getElementById("outfit-image").src = `static/color-palette${currentOutfitImage}.PNG`;-->
+                    <!--                    }-->
 
                     let currentOutfitImage = 1;
                     let outfitImages = [];
