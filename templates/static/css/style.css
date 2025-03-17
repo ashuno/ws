@@ -242,6 +242,10 @@ body {
     height: auto;
     margin-top: 30px;
 }
+
+.softDrag {
+    animation: movePlace-Img 5s infinite alternate;
+}
 @keyframes movePlace-Img {
     0% {
         transform: rotate(-3deg);
