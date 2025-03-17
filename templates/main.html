@@ -26,8 +26,8 @@
                 <div class="container">
                     <div>
                         <div class="image-container">
-                            <img src="static/lesha_small.PNG" alt="Lesha Small" class="image1" />
-                            <img src="static/anya_small.PNG" alt="Anya Small" class="image2" />
+                            <img src="static/lesha_small.PNG" alt="Lesha Small" class="image1 dragImage1" />
+                            <img src="static/anya_small.PNG" alt="Anya Small" class="image2 dragImage2" />
                         </div>
                     </div>
 
@@ -156,8 +156,8 @@
                         <div class="text-block location" id="locationBlock2">
                             <p>Также на площадке имеется ряд ограничений:</p>
                             <ul>
-                                <li>на улице нельзя шуметь послее 21:00</li>
-                                <li>нельзя использовать конфети, бенгальские огни и свечи</li>
+                                <li>- на улице нельзя шуметь послее 21:00</li>
+                                <li>- нельзя использовать конфети, бенгальские огни и свечи</li>
                             </ul>
                         </div>
                         <div class="toggle-button" id="locationToggle">▽ Детали</div>
@@ -185,6 +185,7 @@
                     <a
                         href="https://yandex.ru/maps/?ll=37.658835%2C55.523584&mode=poi&poi%5Bpoint%5D=37.658567%2C55.523560&poi%5Buri%5D=ymapsbm1%3A%2F%2Forg%3Foid%3D79022681946&utm_source=share&z=19"
                         class="place-button"
+                        target="_blank"
                         >Посмотреть локацию</a
                     >
                 </div>
@@ -245,7 +246,7 @@
                         <img src="static/3color5.png" alt="Цвет 5" />
                         <img src="static/3color6.png" alt="Цвет 6" />
                     </div>
-                    <div class="imagecarousel" style="margin-top: 5%">
+                    <div class="image-container" style="margin-top: 5%">
                         <button onclick="changeOutfitBackward()" class="place-button" style="margin-bottom: 25%">
                             <
                         </button>
@@ -270,7 +271,13 @@
 
                     function changeOutfitImages(p) {
                         currentOutfitImage = (currentOutfitImage + p) % totalOutfitImages; // Переключаемся между 1, 2 и 3
-                        outfitImg.src = outfitImages[currentOutfitImage].src;
+
+                        outfitImg.classList.add("fadeOut");
+                        setTimeout(() => {
+                            outfitImg.classList.add("fadeIn");
+                            outfitImg.src = outfitImages[currentOutfitImage].src;
+                            outfitImg.classList.remove("fadeOut");
+                        }, 450);
                     }
 
                     function changeOutfitForward() {
@@ -321,8 +328,21 @@
                     function changeImages(p) {
                         currentImage1 = (currentImage1 + p) % totalImages; // Переключаемся между 1, 2 и 3
                         currentImage2 = (currentImage2 + p) % totalImages; // Переключаемся между 1, 2 и 3
-                        img1.src = images[currentImage1].src;
-                        img2.src = images[currentImage2].src;
+
+                        img2.classList.add("fadeOut");
+                        setTimeout(() => {
+                            img2.classList.add("fadeIn");
+                            img2.src = images[currentImage2].src;
+                            img2.classList.remove("fadeOut");
+                        }, 450);
+                        setTimeout(() => {
+                            img1.classList.add("fadeOut");
+                        }, 200);
+                        setTimeout(() => {
+                            img1.classList.add("fadeIn");
+                            img1.src = images[currentImage1].src;
+                            img1.classList.remove("fadeOut");
+                        }, 650);
                     }
 
                     function changeForward() {
@@ -369,7 +389,7 @@
                         mainContent.classList.add("fade-in");
                         mainContent.style.opacity = "1";
                     }, 1000);
-                }, 4500);
+                }, 45);
                 preloadImages();
                 preloadOutfitImages();
             };

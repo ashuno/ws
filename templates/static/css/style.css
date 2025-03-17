@@ -3,9 +3,6 @@ body {
     font-family: Arial, sans-serif;
 }
 
-
-
-
 /* ВСЕ КАСАЕМО ВРЕМЕННОГО ЭКРАНА */
 
 #temporary-screen {
@@ -37,7 +34,6 @@ body {
     transition: opacity 1s ease; /* Transition for fade effect */
 }
 
-
 @keyframes blink {
     50% {
         border-color: transparent;
@@ -54,7 +50,6 @@ body {
     opacity: 0;
 }
 
-
 .typing {
     border-right: 2px solid black;
     white-space: nowrap;
@@ -67,13 +62,6 @@ body {
         border-color: transparent;
     }
 }
-
-
-
-
-
-
-
 
 /* КОНТЕЙНЕРЫ */
 
@@ -97,7 +85,6 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-
 }
 
 .container {
@@ -109,7 +96,6 @@ body {
     margin-top: 70px;
 }
 
-
 .image-container {
     position: relative;
     display: flex;
@@ -118,22 +104,14 @@ body {
     margin-bottom: 40px;
 }
 
-
-
-
-
-
-
-
 /* ВСЕ ДЛЯ КАРТИНОК */
 
-
 #image {
-            max-width: 100%;
-            height: auto;
-            transition: opacity 0.5s ease; /* Плавный переход для изменения прозрачности */
-            opacity: 1; /* Начальная прозрачность */
-        }
+    max-width: 100%;
+    height: auto;
+    transition: opacity 0.5s ease; /* Плавный переход для изменения прозрачности */
+    opacity: 1; /* Начальная прозрачность */
+}
 
 .image1 {
     transform: rotate(-10deg);
@@ -141,8 +119,6 @@ body {
     height: auto;
     margin-right: -80px;
     margin-bottom: 70px;
-    animation: moveImage1 3s infinite alternate;
-    transition: opacity 0.5s ease;
 }
 
 .image2 {
@@ -150,9 +126,16 @@ body {
     width: 400px;
     height: auto;
     margin-top: 30px;
+}
+
+.dragImage1 {
+    animation: moveImage1 3s infinite alternate;
+    transition: opacity 0.5s ease;
+}
+
+.dragImage2 {
     animation: moveImage2 3s infinite alternate;
     transition: opacity 0.5s ease;
-
 }
 
 @keyframes moveImage1 {
@@ -172,11 +155,38 @@ body {
     }
 }
 
+.fadeIn {
+    animation: fadeIn 0.45s ease-in 0s 1;
+    opacity: 1;
+}
+.fadeOut {
+    animation: fadeOut 0.45s ease-in 0s 1;
+    opacity: 0;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
 .heart {
     margin-top: 10px;
 }
 
-.plain-img1, .plain-img2 {
+.plain-img1,
+.plain-img2 {
     width: 400px;
     height: auto;
 }
@@ -196,7 +206,7 @@ body {
     height: auto;
     border-radius: 30px;
     transition: opacity 0.5s ease;
-    animation: movePlace-Img 5s infinite alternate
+    animation: movePlace-Img 5s infinite alternate;
 }
 
 .icon {
@@ -204,14 +214,12 @@ body {
     height: auto;
 }
 
-
 .star-image-1 {
     margin-right: -350px;
     margin-top: -10px;
     width: 50px;
     height: auto;
     animation: moveStar-Image-1 5s infinite alternate;
-
 }
 @keyframes moveStar-Image-1 {
     0% {
@@ -233,7 +241,6 @@ body {
     width: 400px;
     height: auto;
     margin-top: 30px;
-    animation: movePlace-Img 5s infinite alternate;
 }
 @keyframes movePlace-Img {
     0% {
@@ -262,16 +269,9 @@ body {
     margin: 0; /* Убирает отступы между изображениями */
 }
 
-
 .date-img {
-    width:50%;
+    width: 50%;
 }
-
-
-
-
-
-
 
 /* ТЕКСТЫ */
 
@@ -286,32 +286,28 @@ body {
     animation: text-showup2 1.5s forwards;
 }
 .small-text {
-  font-family: "Shantell Sans", serif;
-  font-optical-sizing: auto;
-  font-weight: 300;
-  font-style: normal;
-  font-size: 25px;
-       line-height: 1.5;
-  font-variation-settings:
-    "BNCE" 0,
-    "INFM" 0,
-    "SPAC" 0;
-  animation: text-showup 1.5s forwards;
+    font-family: "Shantell Sans", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 25px;
+    line-height: 1.5;
+    font-variation-settings: "BNCE" 0, "INFM" 0, "SPAC" 0;
+    animation: text-showup 1.5s forwards;
 }
 
 .bad-script-regular {
-  font-family: "Bad Script", serif;
-  font-weight: 400;
-  font-style: normal;
+    font-family: "Bad Script", serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
-
 .text.show {
-  animation: text-showup2 1.5s forwards;
+    animation: text-showup2 1.5s forwards;
 }
 
 .small-text.show {
-  animation: text-showup 1.5s forwards;
+    animation: text-showup 1.5s forwards;
 }
 
 .date-text {
@@ -352,7 +348,6 @@ body {
     animation: text-showup2 1.5s forwards;
 }
 
-
 .text-block {
     max-height: 0; /* Скрываем блоки по умолчанию */
     overflow: hidden; /* Скрываем переполнение */
@@ -370,13 +365,6 @@ body {
     text-decoration: underline;
     margin-top: 10px; /* Отступ сверху для кнопки */
 }
-
-
-
-
-
-
-
 
 /*ВСЕ ДЛЯ РАСПИСАНИЯ */
 
@@ -425,15 +413,12 @@ body {
     font-size: 16px;
     border: 2px solid #a5bff2;
     font-family: "Shantell Sans", serif;
-      font-optical-sizing: auto;
-      font-weight: 300;
-      font-style: normal;
-      font-size: 25px;
-           line-height: 1.5;
-      font-variation-settings:
-        "BNCE" 0,
-        "INFM" 0,
-        "SPAC" 0;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 25px;
+    line-height: 1.5;
+    font-variation-settings: "BNCE" 0, "INFM" 0, "SPAC" 0;
     transition: background-color 0.3s;
 }
 
@@ -443,18 +428,11 @@ body {
     border: 2px solid black;
 }
 
-
-
-
-
-
-
 /* СТИЛИ ДЛЯ МОБИЛЬНОЙ ВЕРСТКИ */
 @media (max-width: 600px) {
     .main-container {
         margin-top: 60px;
         max-width: 380px;
-
     }
     .container {
         width: 100%;
@@ -465,17 +443,20 @@ body {
         margin-bottom: 50px;
     }
 
-    .image1, .image2, .plain-img1, .plain-img2 {
+    .image1,
+    .image2,
+    .plain-img1,
+    .plain-img2 {
         width: 200px;
         height: auto;
     }
     .image1 {
-    margin-right: -25px;
-    margin-bottom: 40px;
+        margin-right: -25px;
+        margin-bottom: 40px;
     }
 
     .image2 {
-    margin-left: -25px;
+        margin-left: -25px;
     }
 
     .heart {
@@ -483,9 +464,9 @@ body {
         margin-top: 10px;
     }
     .text {
-            font-size: 25px;
-            line-height: 1.5;
-        }
+        font-size: 25px;
+        line-height: 1.5;
+    }
 
     .small-text {
         font-size: 15px;
@@ -516,85 +497,63 @@ body {
         border-radius: 20px;
         font-size: 10px;
         border: 2px solid #a5bff2;
-          font-size: 15px;
+        font-size: 15px;
     }
-        .image-row {
-            display: flex;
-            justify-content: center; /* Центрирует изображения в ряду */
-            position: relative; /* Для позиционирования */
-        }
+    .image-row {
+        display: flex;
+        justify-content: center; /* Центрирует изображения в ряду */
+        position: relative; /* Для позиционирования */
+    }
 
-        .image-row img {
-            width: 40px; /* Ширина изображений по умолчанию */
-            height: auto; /* Автоматическая высота для сохранения пропорций */
-            margin: 0; /* Убирает отступы между изображениями */
-        }
+    .image-row img {
+        width: 40px; /* Ширина изображений по умолчанию */
+        height: auto; /* Автоматическая высота для сохранения пропорций */
+        margin: 0; /* Убирает отступы между изображениями */
+    }
 
+    .schedule {
+        padding: 10px; /* Уменьшаем отступы внутри контейнера */
+    }
 
-        .schedule {
-            padding: 10px; /* Уменьшаем отступы внутри контейнера */
-        }
+    .time {
+        width: 60px; /* Уменьшаем ширину для времени */
+        font-size: 16px; /* Уменьшаем размер шрифта */
+    }
 
-        .time {
-            width: 60px; /* Уменьшаем ширину для времени */
-            font-size: 16px; /* Уменьшаем размер шрифта */
-        }
+    .icon {
+        width: 50px;
+    }
 
-        .icon {
-            width: 50px;
-        }
+    .description {
+        font-size: 16px; /* Уменьшаем размер шрифта для описания */
+    }
 
-        .description {
-            font-size: 16px; /* Уменьшаем размер шрифта для описания */
-        }
+    .additional-info {
+        font-size: 12px; /* Уменьшаем размер шрифта для дополнительного текста */
+    }
 
-        .additional-info {
-            font-size: 12px; /* Уменьшаем размер шрифта для дополнительного текста */
-        }
-
-        .schedule-text {
-            text-align: center;
-            font-size: 20px;
-            line-height: 1.5;
-            animation: text-showup2 1.5s forwards;
-        }
-        .outfit-img {
-            width: 200px;
-            height: auto;
-        }
-        .date-img {
-            width:60%;
-        }
-
+    .schedule-text {
+        text-align: center;
+        font-size: 20px;
+        line-height: 1.5;
+        animation: text-showup2 1.5s forwards;
+    }
+    .outfit-img {
+        width: 200px;
+        height: auto;
+    }
+    .date-img {
+        width: 60%;
+    }
 }
 
-.imagecarousel {
-    display: flex;
-    position: relative;
-    justify-content: center; /* Центрирует изображения в ряду */
-    align-items: flex-end;
-    width: fit-content;
-    height: 233px;
-    margin: 3% 0 40px;
-    gap: 20px;
-  }
-
-.imagecarousel img {
-    width: 80px; /* Ширина изображений */
-    height: auto; /* Автоматическая высота для сохранения пропорций */
-    margin: 0; /* Убирает отступы между изображениями */
-    box-shadow: 2px 2px 8px #8a8a8a;
+/* doesn't work btw so code inplace `-` are used */
+ul {
+    list-style-image: none;
+    list-style-type: disc;
+    list-style-position: outside;
 }
 
-.imagecarousel {
-    animation: bannermove 50s linear infinite;
-}
-
-@keyframes bannermove {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-50%);
-    }
+li {
+    float: left;
 }
