@@ -215,12 +215,11 @@ body {
 }
 
 .star-image-1 {
-    margin-right: -350px;
-    margin-top: -10px;
     width: 50px;
     height: auto;
     animation: moveStar-Image-1 5s infinite alternate;
 }
+
 @keyframes moveStar-Image-1 {
     0% {
         transform: rotate(-10deg);
@@ -229,6 +228,11 @@ body {
         transform: rotate(10deg);
     }
 }
+
+.plane {
+        width: 90px;
+        height: auto;
+    }
 
 .date-pic {
     position: relative;
@@ -258,8 +262,12 @@ body {
 .line {
     width: 400px;
     height: auto;
-    margin-top: 30px;
 }
+
+.flowers {
+        width: 60px;
+        height: auto;
+    }
 
 .image-row {
     display: flex;
@@ -440,11 +448,11 @@ body {
     }
     .container {
         width: 100%;
-        margin-top: 35px;
+        margin-top: 20px;
     }
 
     .image-container {
-        margin-bottom: 50px;
+        margin-bottom: 30px;
     }
 
     .image1,
@@ -476,12 +484,16 @@ body {
         font-size: 15px;
     }
     .star-image-1 {
-        margin-right: -200px;
-        margin-top: -5px;
         width: 30px;
         height: auto;
         animation: moveStar-Image-1 5s infinite alternate;
     }
+
+    .plane {
+        width: 50px;
+        height: auto;
+    }
+
     .date-text {
         font-size: 20px;
     }
@@ -492,7 +504,11 @@ body {
     .line {
         width: 200px;
         height: auto;
-        margin-top: 30px;
+    }
+
+    .flowers {
+        width: 30px;
+        height: auto;
     }
 
     .place-button {
