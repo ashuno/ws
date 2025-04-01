@@ -406,8 +406,14 @@
     }
 </script>
 <script>
+    const gifElement = document.createElement("img");
+    gifElement.style = "width: 100px; height: auto";
+    gifElement.src = "https://anpernett.ru/A&A_wedding/static/hearts2.gif";
+
+    const typingTextElement = document.createElement("b")
+    typingTextElement.classList.add("small-text")
+
     const text = "У нас свадьба!";
-    const typingTextElement = document.getElementById("typing-text");
     let index = 0;
 
     function typeText() {
@@ -422,17 +428,10 @@
     // let gifPreloaded = new Image();
     // gifPreloaded.src = "https://anpernett.ru/A&A_wedding/static/hearts2.gif";
 
-    let gifElement = document.createElement("img");
-    gifElement.style = "width: 100px; height: auto";
-    gifElement.src = "https://anpernett.ru/A&A_wedding/static/hearts2.gif";
-
-    let typingText = document.createElement("b")
-    typingText.classList.add("small-text")
-
     window.onload = function () {
         const tempScreen = document.getElementById("temporary-screen");
         tempScreen.appendChild(gifElement);
-        tempScreen.appendChild(typingText);
+        tempScreen.appendChild(typingTextElement);
 
         // gifElement.src = "https://anpernett.ru/A&A_wedding/static/hearts2.gif";
         typeText(); // Start typing animation
