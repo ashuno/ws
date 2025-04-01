@@ -15,8 +15,8 @@
 </head>
 <body>
 <div id="temporary-screen" class="fade-in">
-    <img alt="Loading..." id="loading-gif" style="width: 100px; height: auto" />
-    <b id="typing-text" class="small-text"></b>
+    <!-- <img alt="Loading..." id="loading-gif" style="width: 100px; height: auto" />
+    <b id="typing-text" class="small-text"></b> -->
 </div>
 
 <div id="main-content" class="fade-out">
@@ -418,15 +418,25 @@
         }
     }
 
-    let gifElement = document.getElementById("loading-gif");
-    let gifPreloaded = new Image();
-    gifPreloaded.src = "https://anpernett.ru/A&A_wedding/static/hearts2.gif";
+    // let gifElement = document.getElementById("loading-gif");
+    // let gifPreloaded = new Image();
+    // gifPreloaded.src = "https://anpernett.ru/A&A_wedding/static/hearts2.gif";
+
+    let gifElement = document.createElement("img");
+    gifElement.style = "width: 100px; height: auto";
+    gifElement.src = "https://anpernett.ru/A&A_wedding/static/hearts2.gif";
+
+    let typingText = document.createElement("b")
+    typingText.classList.add("small-text")
 
     window.onload = function () {
-        gifElement.src = "https://anpernett.ru/A&A_wedding/static/hearts2.gif";
+        const tempScreen = document.getElementById("temporary-screen");
+        tempScreen.appendChild(gifElement);
+        tempScreen.appendChild(typingText);
+
+        // gifElement.src = "https://anpernett.ru/A&A_wedding/static/hearts2.gif";
         typeText(); // Start typing animation
         setTimeout(function () {
-            const tempScreen = document.getElementById("temporary-screen");
             tempScreen.classList.remove("fade-in");
             tempScreen.classList.add("fade-out");
 
