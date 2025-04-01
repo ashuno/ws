@@ -15,8 +15,9 @@
 </head>
 <body>
 <div id="temporary-screen" class="fade-in">
-    <!-- <img alt="Loading..." id="loading-gif" style="width: 100px; height: auto" />
-    <b id="typing-text" class="small-text"></b> -->
+    <!-- <img alt="Loading..." id="loading-gif" style="width: 100px; height: auto" /> -->
+     <video style="width: 100px; height: auto" autoplay muted loop playsinline preload="auto" src="https://anpernett.ru/A&A_wedding/static/hearts2.webm"></video>
+    <b id="typing-text" class="small-text"></b>
 </div>
 
 <div id="main-content" class="fade-out">
@@ -406,12 +407,17 @@
     }
 </script>
 <script>
-    const gifElement = document.createElement("img");
-    gifElement.style = "width: 100px; height: auto";
-    gifElement.src = "https://anpernett.ru/A&A_wedding/static/hearts2.gif";
+    // const gifElement = document.createElement("video", );
+    // gifElement.style = "width: 100px; height: auto";
+    // gifElement.autoplay = true;
+    // gifElement.muted = true;
+    // gifElement.loop = true;
+    // gifElement.playsInline = true;
+    // gifElement.src = "https://anpernett.ru/A&A_wedding/static/hearts2.gif";
 
-    const typingTextElement = document.createElement("b")
-    typingTextElement.classList.add("small-text")
+    // const typingTextElement = document.createElement("b")
+    // typingTextElement.classList.add("small-text")
+    const typingTextElement = document.getElementById("typing-text")
 
     const text = "У нас свадьба!";
     let index = 0;
@@ -430,8 +436,8 @@
 
     window.onload = function () {
         const tempScreen = document.getElementById("temporary-screen");
-        tempScreen.appendChild(gifElement);
-        tempScreen.appendChild(typingTextElement);
+        // tempScreen.appendChild(gifElement);
+        // tempScreen.appendChild(typingTextElement);
 
         // gifElement.src = "https://anpernett.ru/A&A_wedding/static/hearts2.gif";
         typeText(); // Start typing animation
