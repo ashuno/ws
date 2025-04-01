@@ -33,7 +33,7 @@
                 <p>Лёша + Аня</p>
                 <p>=</p>
             </div>
-            <img src="https://anpernett.ru/A&A_wedding/static/heart.svg" alt="Heart" class="heart" />
+            <img id="heart1" alt="Heart" class="heart" />
         </div>
 
         <div class="container">
@@ -47,7 +47,7 @@
                 <p>милых ребят скоро свадьба!</p>
                 <p>Да-да, мы сами в шоке!</p>
             </div>
-            <img src="https://anpernett.ru/A&A_wedding/static/sparkle.svg" alt="Star1" class="star-image-1" style="margin-left: 60%" />
+            <img id="sparkle1" alt="Star1" class="star-image-1" style="margin-left: 60%" />
         </div>
 
         <img id="first-img" alt="Image 1" class="plain-img1" style="margin-top: -7%" />
@@ -64,7 +64,7 @@
                 <p>это радостное событие!</p>
             </div>
             <div class="date-pic">
-                <img src="https://anpernett.ru/A&A_wedding/static/oval.svg" class="date-img" />
+                <img id="oval"  class="date-img" />
                 <div class="date-text">
                     <p>10/06/2025</p>
                 </div>
@@ -73,7 +73,7 @@
                 <p>Просим вас сохранить эту дату свободной</p>
                 <p>для празднования нашей свадьбы.</p>
             </div>
-            <img src="https://anpernett.ru/A&A_wedding/static/line.svg" alt="line" class="line" style="margin-top: 10%"/>
+            <img id="line1" alt="line" class="line" style="margin-top: 10%"/>
         </div>
 
         <div class="container">
@@ -133,9 +133,9 @@
             <div class="text-container text">
                 <p>Место проведения</p>
             </div>
-            <img src="https://anpernett.ru/A&A_wedding/static/sparkle.svg" alt="Star1" class="star-image-1" style="margin-right:60%; margin-top:3%"/>
+            <img id="sparkle2" alt="Star1" class="star-image-1" style="margin-right:60%; margin-top:3%"/>
             <img id="place" alt="Place" class="place-img softDrag" style="margin-top: -10%" />
-            <img src="https://anpernett.ru/A&A_wedding/static/plane.svg" alt="plane" class="plane" style="margin-left:85%; margin-bottom: -11%"/>
+            <img id="plane" alt="plane" class="plane" style="margin-left:85%; margin-bottom: -11%"/>
             <div class="text-container small-text">
                 <p>Ждём вас на площадке "Веранда"</p>
                 <p>на территории Усадьбы Суханово.</p>
@@ -256,7 +256,7 @@
                     >
                 </button>
             </div>
-            <img src="https://anpernett.ru/A&A_wedding/static/line.svg" alt="line" class="line" />
+            <img id="line2" alt="line" class="line" />
         </div>
         <script>
             let currentOutfitImage = 0;
@@ -294,7 +294,7 @@
 
         <div class="container" style="margin-top:-7%;">
             <div class="text-container text">
-                <img src="https://anpernett.ru/A&A_wedding/static/flowers.svg" alt="flowers" class="flowers" style="margin-right:80%; margin-bottom:-13%"/>
+                <img id="flowers" alt="flowers" class="flowers" style="margin-right:80%; margin-bottom:-13%"/>
                 <p>Пожелания</p>
             </div>
 
@@ -302,7 +302,7 @@
                 <p>Мы очень ценим вашу заботу и внимание, поэтому будем рады любому подарку, не важно, в какой конверт он будет упакован :)</p>
                 <p>Если хотите порадовать нас цветами, подарочный сертификат будет отличным вариантом! Так мы сможем наслаждаться ими даже после медового месяца.</p>
             </div>
-            <img src="https://anpernett.ru/A&A_wedding/static/sparkle.svg" alt="sparkle" class="star-image-1" style="margin-left:80%; margin-top:-5%"/>
+            <img id="sparkle3" alt="sparkle" class="star-image-1" style="margin-left:80%; margin-top:-5%"/>
 
         </div>
 
@@ -313,7 +313,7 @@
             <div class="text-container small-text" style="margin-top: 20px">
                 <p>С большой любовью, Лёша и Аня!</p>
             </div>
-            <img src="https://anpernett.ru/A&A_wedding/static/heart.svg" alt="Heart" class="heart" style="margin-top: 5%; margin-bottom: 3%" />
+            <img id="heart2" alt="Heart" class="heart" style="margin-top: 5%; margin-bottom: 3%" />
             <div class="image-container">
                 <button onclick="changeBackward()" class="place-button" style="margin-bottom: 30%"><</button>
                 <img id="image1" class="image1" style="margin-right: -50%" />
@@ -372,6 +372,17 @@
 </div>
 <script>
     function postloadImages() {
+        document.getElementById("heart1").src = "https://anpernett.ru/A&A_wedding/static/heart.svg";
+        document.getElementById("heart2").src = "https://anpernett.ru/A&A_wedding/static/heart.svg";
+        document.getElementById("sparkle1").src = "https://anpernett.ru/A&A_wedding/static/sparkle.svg";
+        document.getElementById("sparkle2").src = "https://anpernett.ru/A&A_wedding/static/sparkle.svg";
+        document.getElementById("sparkle3").src = "https://anpernett.ru/A&A_wedding/static/sparkle.svg";
+        document.getElementById("oval").src = "https://anpernett.ru/A&A_wedding/static/oval.svg";
+        document.getElementById("line1").src = "https://anpernett.ru/A&A_wedding/static/line.svg";
+        document.getElementById("line2").src = "https://anpernett.ru/A&A_wedding/static/line.svg";
+        document.getElementById("plane").src = "https://anpernett.ru/A&A_wedding/static/plane.svg";
+        document.getElementById("flowers").src = "https://anpernett.ru/A&A_wedding/static/flowers.svg";
+
         document.getElementById("l-small").src = "https://anpernett.ru/A&A_wedding/static/lesha_small-min.PNG";
         document.getElementById("a-small").src = "https://anpernett.ru/A&A_wedding/static/anya_small-min.PNG";
         document.getElementById("first-img").src = "https://anpernett.ru/A&A_wedding/static/first-image-min.PNG";
