@@ -386,8 +386,8 @@
     let gif = document.getElementById("loading-gif");
 
     window.onload = function () {
-        typeText(); // Start typing animation
         gif.src = "https://anpernett.ru/A&A_wedding/static/hearts2.gif"
+        typeText(); // Start typing animation
         setTimeout(function () {
             const tempScreen = document.getElementById("temporary-screen");
             tempScreen.classList.remove("fade-in");
