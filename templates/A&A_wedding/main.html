@@ -15,7 +15,7 @@
 </head>
 <body>
 <div id="temporary-screen" class="fade-in">
-    <img src="https://anpernett.ru/A&A_wedding/static/hearts2.gif" alt="Loading..." id="loading-gif" style="width: 100px; height: auto" />
+    <img alt="Loading..." id="loading-gif" style="width: 100px; height: auto" />
     <b id="typing-text" class="small-text"></b>
 </div>
 
@@ -383,10 +383,12 @@
         }
     }
 
-    let gif = document.getElementById("loading-gif");
+    let gifElement = document.getElementById("loading-gif");
+    let gifPreloaded = new Image();
+    gifPreloaded.src = "https://anpernett.ru/A&A_wedding/static/hearts2.gif";
 
     window.onload = function () {
-        gif.src = "https://anpernett.ru/A&A_wedding/static/hearts2.gif"
+        gifElement.src = "https://anpernett.ru/A&A_wedding/static/hearts2.gif";
         typeText(); // Start typing animation
         setTimeout(function () {
             const tempScreen = document.getElementById("temporary-screen");
