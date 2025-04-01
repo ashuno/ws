@@ -383,8 +383,11 @@
         }
     }
 
+    let gif = document.getElementById("loading-gif");
+
     window.onload = function () {
         typeText(); // Start typing animation
+        gif.src = "static/hearts2.gif"
         setTimeout(function () {
             const tempScreen = document.getElementById("temporary-screen");
             tempScreen.classList.remove("fade-in");
